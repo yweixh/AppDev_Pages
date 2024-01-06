@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Saved_Words"
+    android:background="@color/linear">
+
+    <ImageView
+        android:id="@+id/top_layout"
+        android:background="@color/blk2"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:alpha="10"
+        android:importantForAccessibility="no" />
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="40sp"
+        android:layout_height="50sp"
+        android:src="@drawable/arrow_back"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"/>
+
+    <ImageView
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:importantForAccessibility="no" />
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="35sp"
+        android:text="Saved words"
+        android:fontFamily="@font/breeserif"
+        android:textColor="@color/white"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="18dp"
+        tools:ignore="HardcodedText" />
+</RelativeLayout>
