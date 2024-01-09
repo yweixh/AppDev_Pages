@@ -5,8 +5,11 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -14,9 +17,9 @@ public class MainActivity extends AppCompatActivity {
 
     DrawerLayout drawerLayout;
     ImageView menu;
-
-
     LinearLayout gameplay, archive, history, profile, faqs, feedback, logout;
+    Button singleBtn, multiBtn;
+    boolean isButtonClicked = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
         faqs = findViewById(R.id.faqs);
         feedback = findViewById(R.id.feedback);
         logout = findViewById(R.id.logout);
+
+        singleBtn = findViewById(R.id.SingleBtn);
+        multiBtn = findViewById(R.id.MultiBtn);
 
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,8 +83,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        
-
+        singleBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ChooseDifficultyActivity.class);
+                startActivity(intent);
+            }
+        });
+        multiBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ChooseDifficultyActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
     public static void openDrawer(DrawerLayout drawerLayout){

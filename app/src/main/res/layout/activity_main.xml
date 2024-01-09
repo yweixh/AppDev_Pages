@@ -5,21 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/drawerLayout"
-    tools:context=".MainActivity"
-    android:background="@color/linear">
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
         <include layout="@layout/toolbar" />
 
         <FrameLayout
             android:id="@+id/fragment_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/linear" />
+            android:background="@drawable/background" />
 
     </LinearLayout>
 
@@ -28,9 +26,50 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:background="@color/blk">
-
         <include layout="@layout/nav_bar" />
 
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/gameTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="250dp"
+            android:textSize="40sp"
+            android:textColor="@color/font_color"
+            android:text="VocabuWary"
+            android:fontFamily="@font/interphases_medium"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/gameTxt"
+            android:layout_marginTop="50dp"
+            android:layout_centerHorizontal="true">
+            <Button
+                android:id="@+id/SingleBtn"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button"
+                android:fontFamily="@font/interphases_medium"
+                android:textSize="20sp"
+                android:text="Single Player"/>
+            <Button
+                android:id="@+id/MultiBtn"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/button"
+                android:fontFamily="@font/interphases_medium"
+                android:textSize="20sp"
+                android:text="Multiplayer"/>
+        </LinearLayout>
 
     </RelativeLayout>
 
