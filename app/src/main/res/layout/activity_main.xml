@@ -21,36 +21,27 @@
 
     </LinearLayout>
 
+
     <RelativeLayout
-        android:layout_width="300dp"
         android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:background="@color/blk">
-        <include layout="@layout/nav_bar" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
+        android:layout_width="match_parent">
         <TextView
             android:id="@+id/gameTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="250dp"
+            android:layout_marginTop="240dp"
             android:textSize="40sp"
             android:textColor="@color/font_color"
             android:text="VocabuWary"
             android:fontFamily="@font/interphases_medium"/>
-
         <LinearLayout
             android:orientation="vertical"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:layout_below="@+id/gameTxt"
             android:layout_marginTop="50dp"
+            android:layout_marginLeft="-1000dp"
             android:layout_centerHorizontal="true">
             <Button
                 android:id="@+id/SingleBtn"
@@ -70,14 +61,14 @@
                 android:textSize="20sp"
                 android:text="Multiplayer"/>
         </LinearLayout>
-
     </RelativeLayout>
 
-
-
-
-
-
-
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/blk">
+        <include layout="@layout/nav_bar"/>
+    </RelativeLayout>
 
 </androidx.drawerlayout.widget.DrawerLayout>

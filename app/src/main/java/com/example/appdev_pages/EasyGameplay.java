@@ -16,6 +16,7 @@ import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.appdev_pages.Model.ArchivedWord;
 import com.example.appdev_pages.Model.Question;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -32,6 +33,7 @@ public class EasyGameplay extends AppCompatActivity implements View.OnClickListe
     int scoreNum, questionNum;
     Button first, second, third, fourth;
     List<Question> questionList;
+    List<ArchivedWord> correctWordsList = new ArrayList<>();
     CountDownTimer countDown;
     FirebaseFirestore firestore = FirebaseFirestore.getInstance();
     boolean quizEnded = false;
@@ -73,6 +75,7 @@ public class EasyGameplay extends AppCompatActivity implements View.OnClickListe
             public void onFinish() {
                 if(!quizEnded) {
                     quizEnded = true;
+
                     Intent intent = new Intent(EasyGameplay.this, ScoreActivity.class);
                     startActivity(intent);
                     finish();
@@ -134,6 +137,7 @@ public class EasyGameplay extends AppCompatActivity implements View.OnClickListe
 
     }
 
+
     @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View v) {
@@ -157,7 +161,6 @@ public class EasyGameplay extends AppCompatActivity implements View.OnClickListe
 
         if (currentQuestion.getCorrectAns().contentEquals(selectedButton.getText())) {
             scoreNum++;
-
             selectedButton.setBackgroundTintList(ColorStateList.valueOf(Color.GREEN));
 
         } else {
@@ -183,6 +186,7 @@ public class EasyGameplay extends AppCompatActivity implements View.OnClickListe
             changeQuestion();
         }, 500);
     }
+
 
     private void changeQuestion() {
         if (currentQuestionCount < Question_Limit - 1) {  // Check if the question limit is reached

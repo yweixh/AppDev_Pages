@@ -12,7 +12,6 @@
         android:layout_height="90dp"
         android:alpha="10"
         android:importantForAccessibility="no" />
-
     <ImageView
         android:id="@+id/backButton"
         android:layout_width="40sp"
@@ -20,7 +19,6 @@
         android:src="@drawable/arrow_back"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"/>
-
     <ImageView
         android:id="@+id/bookmark"
         android:src="@drawable/bookmark_border"
@@ -39,8 +37,6 @@
         android:layout_height="50sp"
         android:layout_width="90sp"
         android:importantForAccessibility="no" />
-
-
     <TextView
         android:id="@+id/archivee"
         android:layout_width="match_parent"
@@ -53,10 +49,11 @@
         android:textColor="@color/white"
         android:textSize="35sp"
         tools:ignore="HardcodedText" />
-
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/top_layout"
-        android:layout_marginTop="20dp" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/recycler_view"
+        android:layout_marginTop="120dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
 </RelativeLayout>
